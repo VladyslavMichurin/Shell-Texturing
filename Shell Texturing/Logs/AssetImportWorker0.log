@@ -1,0 +1,927 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.7f1 (b16b3b16c7a0) revision 11627323'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 16294 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\programs\Unity Editors\2022.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/projects/Git/Shell-Texturing/Shell Texturing
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53953
+Successfully changed project path to: D:/projects/Git/Shell-Texturing/Shell Texturing
+D:/projects/Git/Shell-Texturing/Shell Texturing
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22012] Host "[IP] 192.168.2.221 [Port] 0 [Flags] 2 [Guid] 3637988377 [EditorId] 3637988377 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-J5TC0EM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22012] Host "[IP] 192.168.2.221 [Port] 0 [Flags] 2 [Guid] 3637988377 [EditorId] 3637988377 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-J5TC0EM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 5.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.7f1 (b16b3b16c7a0)
+[Subsystems] Discovering subsystems at path D:/programs/Unity Editors/2022.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/projects/Git/Shell-Texturing/Shell Texturing/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   NVIDIA
+    VRAM:     3935 MB
+    Driver:   32.0.15.6094
+Initialize mono
+Mono path[0] = 'D:/programs/Unity Editors/2022.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/programs/Unity Editors/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/programs/Unity Editors/2022.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/programs/Unity Editors/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/programs/Unity Editors/2022.3.7f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.005069 seconds.
+- Loaded All Assemblies, in  0.356 seconds
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.273 seconds
+Domain Reload Profiling: 629ms
+	BeginReloadAssembly (107ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (152ms)
+		LoadAssemblies (106ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (150ms)
+			TypeCache.Refresh (148ms)
+				TypeCache.ScanAssembly (135ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (273ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (210ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (134ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\projects\Git\Shell-Texturing\Shell Texturing\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\projects\Git\Shell-Texturing\Shell Texturing\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.690 seconds
+Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.571 seconds
+Domain Reload Profiling: 1262ms
+	BeginReloadAssembly (195ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (396ms)
+		LoadAssemblies (323ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (195ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (155ms)
+			ScanForSourceGeneratedMonoScriptInfo (18ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (572ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (405ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (88ms)
+			ProcessInitializeOnLoadAttributes (281ms)
+			ProcessInitializeOnLoadMethodAttributes (23ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3066 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (56.4 KB). Loaded Objects now: 3528.
+Memory consumption went from 113.9 MB to 113.8 MB.
+Total: 3.001700 ms (FindLiveObjects: 0.247700 ms CreateObjectMapping: 0.277300 ms MarkObjects: 2.390600 ms  DeleteObjects: 0.085100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1005611.515696 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(2c70b573d5995b143915169f22552620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(2c70b573d5995b143915169f22552620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b63f51361708ed72b3c3970a2f4c597f') in 0.002359 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85bec50c8be757587fedfaade313866') in 0.000420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.8 KB). Loaded Objects now: 3528.
+Memory consumption went from 65.0 MB to 65.0 MB.
+Total: 31.129600 ms (FindLiveObjects: 0.360300 ms CreateObjectMapping: 0.249200 ms MarkObjects: 30.403000 ms  DeleteObjects: 0.115500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7085.621783 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4fe85251aa2e89732c359432baa2c3') in 0.003942 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.337586 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(c8cc454f6ee6a9c4abf302281c850ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(c8cc454f6ee6a9c4abf302281c850ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb40a5db49e811ceb51b5e9ba296c28') in 0.000382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 9.303406 seconds.
+  path: Assets/Materials
+  artifactKey: Guid(391e98e17bbd1a248af540d29e4a7e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials using Guid(391e98e17bbd1a248af540d29e4a7e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3d66ff22a74f84c1195254819bb720') in 0.000388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.326161 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42113a017de814bc63aa9dcfa12b1d2e') in 0.402712 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 17.536416 seconds.
+  path: Assets/Scripts/Shell Shader V1.shader
+  artifactKey: Guid(e5719cc90169219429a925d93c153fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Shell Shader V1.shader using Guid(e5719cc90169219429a925d93c153fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea91c92bdfd8f26473c585d4b9a2fd3') in 0.002964 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 403.630759 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(fba02f38959ddc049ae03279ce64e4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(fba02f38959ddc049ae03279ce64e4c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d2b79607a6b99e109320a90fc4d620f') in 0.000574 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.635041 seconds.
+  path: Assets/Textures/bec9a61c0b199a79be7dc7c0582b2d934a086228.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/bec9a61c0b199a79be7dc7c0582b2d934a086228.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79143079d58202c01ca67f2bddf4d3e0') in 0.025162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 5.430662 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeaf836594002c68eb76fce34464c312') in 0.015870 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 23.298404 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f55fd949936fe43f3b312875f078c9a') in 0.046388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 108.416003 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'texColor' at line 51 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'texColor' at line 51 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: '1da93e5e2a947661b886d8f33d59e6c6') in 0.061524 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 12.127130 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac0cd9547361eb2573b32edc306d2d18') in 0.033189 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 78.631989 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5736c0d0a722e23d7bc3f6dde655cb') in 0.025481 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 14.844947 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d405a95487ae297a1b7b115b96170e') in 0.018939 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 5.922172 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65f9f4ca24941e10c6b2892e07ecbf1b') in 0.006390 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 83.416707 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'Color' at line 57 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'Color' at line 57 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: '14983696785fccbeaa42cb67abbbf9a8') in 0.059679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 10.403839 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'Color' at line 57 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': undeclared identifier 'Color' at line 57 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: '232e5a3cf559a0950faf79b4cac31f8f') in 0.058807 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.880351 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '588b8854b470527c2288444c466ef58b') in 0.032171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 11.352089 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1623a40d80878e5043cf0c49655a8e76') in 0.024778 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 71.147625 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9e241f837ac162bd67f8e8e7795f59') in 0.031431 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 29.586161 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6469cc17f8f38976adcc8d63b3219c65') in 0.015692 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 12.525147 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a5ddd5f1ac3b8e9337a6860439ac88f') in 0.014383 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 6.669096 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '609f3fae64edc497dcb5fdcf0990715e') in 0.017219 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 7.340635 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6e5f0142402eb0df36586c9d85d192') in 0.020575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 8.518004 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7436ac4f1111bd18716f5443d5c28fb9') in 0.007182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 490.989111 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0250933ebab66bad7ccd6626935db402') in 0.282982 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.157203 seconds.
+  path: Assets/Materials/Shell Mat 2.mat
+  artifactKey: Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 2.mat using Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f6779b061605072a74f6bb34e97cf5') in 0.008243 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.131259 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e82d7e1d62a1bf1f38ff0a78736d87') in 0.026997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.152288 seconds.
+  path: Assets/Materials/Shell Mat 4.mat
+  artifactKey: Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 4.mat using Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c9e03d949d6bc67cb0b43d297d4543') in 0.007588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.384386 seconds.
+  path: Assets/Materials/Shell Mat 5.mat
+  artifactKey: Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 5.mat using Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b6be1f839abeeda69423baaa7ae434') in 0.007275 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 64.158477 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f6a6a5acdd5a30d0e011e6676a68d3') in 0.041790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 55.329279 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e333e2210398b17f5e5e56b7aa82a572') in 0.069573 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 9.035489 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a71bf2ec13180dbb1267388bfdb34fbf') in 0.036816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 22.352707 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': unrecognized identifier 'Cull' at line 24 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': unrecognized identifier 'Cull' at line 24 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: 'b65921a29befd85f8268b3139223de11') in 0.079436 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 78.494047 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': unrecognized identifier 'Cull' at line 24 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': unrecognized identifier 'Cull' at line 24 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: '6e9330de18ffa16dd300e0ca0d04d8dc') in 0.026611 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.467069 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbdc41a660d39aa30ad772586e27dcd5') in 0.034388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 61.467940 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dedf115bdeff4d1d934d0914f249767') in 0.029753 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 14.828328 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3d383a0c0ccd3d9a5dae72e2bcd6dc') in 0.029356 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.046339 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef42f0c81655e05c7e001bf93b430e9c') in 0.298877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 29.296874 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da7aea44a6a85517ef115e1e05db834') in 0.056358 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 9.839646 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eeb8f5a32d649993e50e53051791dd7') in 0.034793 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.582873 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in '_MyShaders/1)Shell Shader V1': 'clip': no matching 1 parameter intrinsic function; Possible intrinsic functions are: clip(float|half) at line 68 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': invalid subscript 'a' at line 68 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': 'clip': no matching 1 parameter intrinsic function; Possible intrinsic functions are: clip(float|half) at line 68 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+Shader error in '_MyShaders/1)Shell Shader V1': invalid subscript 'a' at line 68 (on d3d11)
+
+Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with <no keywords>
+Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
+Disabled keywords: SHADER_API_GLES30 UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
+ -> (artifact id: '47904a994b66984ed5fcfb48b25b3b48') in 0.018034 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 39.084889 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2785ce937a3282d55449547d632bc11') in 0.283143 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 35.459139 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06821fc5442852804b2dbb7542cfb8bf') in 0.134752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 295.741127 seconds.
+  path: Assets/Materials/Shell Mat.mat
+  artifactKey: Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat.mat using Guid(80850ef514a8c0a4f9bd55bd9b025e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a372790604284a27a5b7da9d95320683') in 0.043775 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.324411 seconds.
+  path: Assets/Materials/Shell Mat 2.mat
+  artifactKey: Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 2.mat using Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abe2313fabddf0ff599a92fc4d989510') in 0.039610 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Shell Mat 5.mat
+  artifactKey: Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 5.mat using Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03ca6c9f8b2beca4e19abda9f4f82ac') in 0.020663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 16.253362 seconds.
+  path: Assets/Textures/Noise Texture.jpeg
+  artifactKey: Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Noise Texture.jpeg using Guid(852db073d12cde84d848a3d3bcbde21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a560567c042013a3b636ad59a4aa1d4') in 0.017740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 352.330549 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386fa28418d98f020a5912ec177a8c49') in 0.292897 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 51.851816 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c1023f668a96e527e03f62248db086') in 0.160654 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Shell Mat 5.mat
+  artifactKey: Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 5.mat using Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbedaf61bf83074b59494d3392edc70a') in 0.017528 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 31.911606 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1e3399feea22332b1f0a761397058b4') in 0.075731 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 55.475094 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b306c5443e841ab87ff484a95a09bb48') in 0.054513 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cad84aa1a109a0baa83e3bee66bf2fc6') in 0.084904 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 23.276715 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180800be85c06550113f163b1eebd6f8') in 0.094937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 8.103006 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26ca61301a7f7c18368211257717c1b8') in 0.035421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Materials/Shell Mat 4.mat
+  artifactKey: Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 4.mat using Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32106331b1ab62738e9717e9b62ffa4d') in 0.090632 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 16.940715 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6291279bddb5d19a08386ab8014c695') in 0.060443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 8.885971 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb0e619b56e841ed1d298986b1ae055') in 0.032205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1523bc727c54e499d1ee45239332845') in 0.104184 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 58.538959 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd581affba934843791c6a68a526c82') in 0.056195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Shell Mat 5.mat
+  artifactKey: Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 5.mat using Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b7223e99c80f25412bbcdc567e77e5') in 0.059772 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 26.796641 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '468e3ec2d159a7a69c12dff55e61ff65') in 0.070333 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Shell Mat 4.mat
+  artifactKey: Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 4.mat using Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '483f0b239360074109395cee9206949d') in 0.081047 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 48.664862 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed6da983e7faad493282d43e489180f') in 0.077741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6186d6a801541108ff8bb9ede6f4d98') in 0.025598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Shell Mat 4.mat
+  artifactKey: Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 4.mat using Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08e504297dd2ea712841913cec71fc6') in 0.044332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 7.244748 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b338d4d99418987da04590b15a2f3bc8') in 0.036956 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2768be3e296f3e8c6ae0d0fdb82bfce2') in 0.056679 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Shell Mat 4.mat
+  artifactKey: Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 4.mat using Guid(1fc51ea947cd38e48bc59d8da85c3f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4df628cdbf3f8c0114d7af91616d1c09') in 0.020787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 41.184247 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f4e6e62ed01e29a2b984278c824f14c') in 0.055465 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 25.779595 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '287e71e17281e3652556d793288123e6') in 0.064071 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Shell Mat 5.mat
+  artifactKey: Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 5.mat using Guid(0c2f44643547545409a1c77f89ca47a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c00e0bd1ebc5a919ae1fa456c09cc1') in 0.034673 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 20.706206 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ea15d4f54070d2b83b8a73a1dc1027') in 0.142158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 42.203336 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58d22d4c27da5d41825b1e2100bb4ac') in 0.043807 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '448a02f948fcc3b1b0dc0a97d639dd36') in 0.067355 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 114.317201 seconds.
+  path: Assets/Materials/Shell Mat 1.mat
+  artifactKey: Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 1.mat using Guid(53c9d4664db94814883cbd857fa31a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3595bfe8f9d306d0de6f6af9e023c38b') in 0.126706 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Shell Mat 2.mat
+  artifactKey: Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 2.mat using Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '174f5c2a35876fa039e869c3edf7a4d2') in 0.050122 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b77dbbb225c0cb0d12f457c74aa50d5b') in 0.071391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 51.589605 seconds.
+  path: Assets/Materials/Shell Mat 2.mat
+  artifactKey: Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 2.mat using Guid(141cffb7bda66804389b79e20f9102cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f546ff81c19b35ed16137dc48537cdb') in 0.088886 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Shell Mat 3.mat
+  artifactKey: Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shell Mat 3.mat using Guid(b6352f6c7b89c964d9600b6e8b27c08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '289968e9ad6a19a24b5825cf40ac34c5') in 0.049581 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
