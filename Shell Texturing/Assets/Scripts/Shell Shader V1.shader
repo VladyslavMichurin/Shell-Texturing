@@ -1,19 +1,13 @@
 Shader "_MyShaders/1)Shell Shader V1"
 {
-    Properties
-    {
-        _ShellIndex ("Shell Index", Integer) = 0
-        _Color ("Color", Color) = (1, 1, 1, 1)
-        _NoiseTex ("Noise Texture", 2D) = "white" {}
-    }
     SubShader
     {
         Tags 
         { 
-            "RenderType"="Opaque" 
+            "LightMode" = "ForwardBase"
         }
 
-        Cull off
+        Cull Off
 
         Pass
         {
@@ -21,7 +15,8 @@ Shader "_MyShaders/1)Shell Shader V1"
             #pragma vertex vert
             #pragma fragment frag
 
-            #include "UnityCG.cginc"
+            #include "UnityPBSLighting.cginc"
+            #include "AutoLight.cginc"
 
             struct appdata
             {
@@ -39,40 +34,75 @@ Shader "_MyShaders/1)Shell Shader V1"
                 float3 normal: TEXCOORD1;
             };
 
-            float _ShellIndex;
-
-            float4 _Color;
-
             sampler2D _NoiseTex;
             float4 _NoiseTex_ST;
 
+            float4 _MainColor, _SecondColor;
+
+            int _ShellIndex;
+            int _ShellCount;
+            float _MaxDistance;
+            float _Density;
+            float _NoiseMin, _NoiseMax;
+            float _Thickness;
+
+
+            float hash(uint n) {
+				// integer hash copied from Hugo Elias
+				n = (n << 13U) ^ n;
+				n = n * (n * n * 15731U + 0x789221U) + 0x1376312589U;
+				return float(n & uint(0x7fffffffU)) / float(0x7fffffff);
+			}
+
             v2f vert (appdata v)
             {
-
                 v2f o;
 
+                o.uv = v.uv;
+                o.normal = normalize(UnityObjectToWorldNormal(v.normal));
+
+                float distance_Delta = _MaxDistance / _ShellCount;
+
+                v.vertex.xyz += v.normal.xyz * (distance_Delta * _ShellIndex);
+
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _NoiseTex);
 
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                float3 toReturn = 0;
-                float noiseValue = tex2D(_NoiseTex, i.uv).a;
+                float shellIndex = _ShellIndex;
+                float shellCount = _ShellCount;
 
-                float clipValue = (0.15 * _ShellIndex);
+                float2 newUV = i.uv * _Density;
+                float height = shellIndex / shellCount;
 
-                if(noiseValue > clipValue)
+                float2 localUV = frac(newUV) * 2 - 1;
+                float localDistanceFromCenter = length(localUV);
+
+                uint2 hashUV = newUV;
+                uint seed = hashUV.x + 100 * hashUV.y + 100 * 10;
+                float rand = lerp(_NoiseMin, _NoiseMax, hash(seed));
+
+                float3 albedo = 0;
+                if(rand > height)
                 {
-                    toReturn.rgb = _Color.rgb;
-                    toReturn.g += 0.1 * _ShellIndex;
+                    albedo = lerp(_MainColor, _SecondColor, height);
+                }
+                else
+                {
+                    discard;
                 }
 
-                clip(noiseValue > clipValue ? 1: -1);
+                if(localDistanceFromCenter > _Thickness * (rand - height) && shellIndex > 0)
+                {
+                    discard;
+                }
 
-                return float4(toReturn, 1);
+                
+                
+                return float4(albedo, 1);
             }
             ENDCG
         }
