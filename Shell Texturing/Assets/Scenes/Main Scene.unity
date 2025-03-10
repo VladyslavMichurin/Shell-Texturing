@@ -157,14 +157,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateVariables: 1
   shellShader: {fileID: 4800000, guid: e5719cc90169219429a925d93c153fb9, type: 3}
-  mainColor: {r: 0.1792453, g: 0.07830444, b: 0, a: 1}
-  secondColor: {r: 0.8113208, g: 0.5106529, b: 0.2793699, a: 1}
+  mainColor: {r: 0.9607844, g: 0.72156864, b: 0.5411765, a: 1}
   shellCount: 32
-  maxDistance: 1
-  density: 100
+  shellLenght: 0.15
+  density: 160
   noiseMin: 0.3
   noiseMax: 1
-  thickness: 1
+  thickness: 1.25
+  occlusionAttenuation: 1.35
+  occlusionBias: 0.3
+  distanceAttenuation: 0.55
 --- !u!135 &422379199
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -246,7 +248,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -472,13 +474,15 @@ MonoBehaviour:
   UpdateVariables: 1
   shellShader: {fileID: 4800000, guid: e5719cc90169219429a925d93c153fb9, type: 3}
   mainColor: {r: 0.057614554, g: 0.1792453, b: 0, a: 1}
-  secondColor: {r: 0.8, g: 1, b: 0, a: 1}
   shellCount: 16
-  maxDistance: 1
+  shellLenght: 1
   density: 20
   noiseMin: 0.3
   noiseMax: 1
   thickness: 1
+  occlusionAttenuation: 1
+  occlusionBias: 0
+  distanceAttenuation: 1
 --- !u!64 &1154893782
 MeshCollider:
   m_ObjectHideFlags: 0
