@@ -15,6 +15,8 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
             #pragma vertex vert
             #pragma fragment frag
 
+            #pragma multi_compile _ _GLOBAL_SHELL_DIRECTION
+
             #include "UnityPBSLighting.cginc"
             #include "AutoLight.cginc"
 
@@ -34,11 +36,14 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
                 float3 normal : TEXCOORD1;
             };
 
-            float4 _MainColor;
+            sampler2D _ShellTexture, _ShellsLocationTexture;
+            float4 _ShellTexture_ST, _ShellsLocationTexture_ST;
+            float4 _Tint;
 
             int _ShellIndex;
             int _ShellCount;
 
+            float _Density;
             float _MaxFurLength;
 
             float3 _ShellDirection;
@@ -54,11 +59,14 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
                 o.normal = normalize(UnityObjectToWorldNormal(v.normal));
 
                 float k = pow(h, 3);
-                //float3 worldShellDirection = mul(_ShellDirection, unity_WorldToObject);
-                v.vertex.xyz += (_ShellDirection * k);
+                float3 shellDirection = _ShellDirection;
+                #if defined(_GLOBAL_SHELL_DIRECTION)
+                    shellDirection = mul(unity_WorldToObject, _ShellDirection);
+                #endif
+                v.vertex.xyz += (shellDirection * k);
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
+                o.uv = TRANSFORM_TEX(v.uv, _ShellTexture);
 
                 return o;
             }
@@ -72,23 +80,27 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
 
             fixed4 frag (v2f i) : SV_Target
             {
+                float shellsLocation = tex2D(_ShellsLocationTexture, i.uv);
+
                 float shellIndex = _ShellIndex;
                 float shellCount = _ShellCount;
 
-                float2 newUV = i.uv * 100;
+                float2 newUV = i.uv * _Density;
                 float h = shellIndex / shellCount;
 
                 uint2 hashUV = newUV;
                 uint seed = hashUV.x + 100 * hashUV.y + 100 * 10;
-                float rand = hash(seed);
+                float rand = hash(seed) * shellsLocation;
 
-                float3 albedo = _MainColor;
+                float3 albedo = tex2D(_ShellTexture, i.uv) * _Tint;
                 if(rand < h)
                 {
                     discard;
                 }
 
-                return float4(albedo * h, 1);
+                float3 finalColor = lerp(albedo * h, albedo, 1 - shellsLocation);
+
+                return float4(finalColor, 1);
             }
             ENDCG
         }
