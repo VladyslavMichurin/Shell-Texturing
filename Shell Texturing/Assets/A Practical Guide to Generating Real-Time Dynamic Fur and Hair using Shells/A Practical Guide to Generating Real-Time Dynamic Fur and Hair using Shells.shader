@@ -30,8 +30,8 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
 
             struct v2f
             {
-                float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                float2 uv : TEXCOORD0;
 
                 float3 normal : TEXCOORD1;
             };
@@ -52,11 +52,12 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
             {
                 v2f o;
 
+                o.uv = TRANSFORM_TEX(v.uv, _ShellTexture);
+                o.normal = normalize(UnityObjectToWorldNormal(v.normal));
+
                 float h = (float)_ShellIndex / (float)_ShellCount;
                 float FurLength = _MaxFurLength * h;
                 v.vertex.xyz += (v.normal.xyz * FurLength);
-
-                o.normal = normalize(UnityObjectToWorldNormal(v.normal));
 
                 float k = pow(h, 3);
                 float3 shellDirection = _ShellDirection;
@@ -66,7 +67,6 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
                 v.vertex.xyz += (shellDirection * k);
 
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _ShellTexture);
 
                 return o;
             }
@@ -80,7 +80,9 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
 
             fixed4 frag (v2f i) : SV_Target
             {
+                float3 albedo = tex2D(_ShellTexture, i.uv) * _Tint;
                 float shellsLocation = tex2D(_ShellsLocationTexture, i.uv);
+                float3 finalColor = float3(255, 0, 255) / (float)255;
 
                 float shellIndex = _ShellIndex;
                 float shellCount = _ShellCount;
@@ -92,13 +94,12 @@ Shader "_MyShaders/2)A Practical Guide to Generating Real-Time Dynamic Fur and H
                 uint seed = hashUV.x + 100 * hashUV.y + 100 * 10;
                 float rand = hash(seed) * shellsLocation;
 
-                float3 albedo = tex2D(_ShellTexture, i.uv) * _Tint;
-                if(rand < h)
+                if(rand < 0.65)
                 {
                     discard;
                 }
 
-                float3 finalColor = lerp(albedo * h, albedo, 1 - shellsLocation);
+                finalColor = lerp(albedo * h, albedo, 1 - shellsLocation);
 
                 return float4(finalColor, 1);
             }

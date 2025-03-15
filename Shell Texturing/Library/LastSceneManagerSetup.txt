@@ -1,6 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/A Practical Guide to Generating Real-Time Dynamic Fur and
-    Hair using Shells.unity
+- path: Assets/_Scenes/_Vlad's Shells.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

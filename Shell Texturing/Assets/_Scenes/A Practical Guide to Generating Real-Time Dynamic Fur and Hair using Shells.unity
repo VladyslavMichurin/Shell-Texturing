@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &42693962
+--- !u!1 &42137375
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,11 +131,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 42693967}
-  - component: {fileID: 42693966}
-  - component: {fileID: 42693965}
-  - component: {fileID: 42693964}
-  - component: {fileID: 42693963}
+  - component: {fileID: 42137380}
+  - component: {fileID: 42137379}
+  - component: {fileID: 42137378}
+  - component: {fileID: 42137377}
+  - component: {fileID: 42137376}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -143,13 +143,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &42693963
+--- !u!114 &42137376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42693962}
+  m_GameObject: {fileID: 42137375}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d73bed766dc488043a4772b1bcd0f190, type: 3}
@@ -160,18 +160,18 @@ MonoBehaviour:
   shellShader: {fileID: 4800000, guid: 99de75e617cd4ad46b84e04b7406b786, type: 3}
   shellTexture: {fileID: 0}
   shellsLocationTexture: {fileID: 0}
-  tint: {r: 0, g: 0, b: 0, a: 0}
+  tint: {r: 1, g: 0, b: 0, a: 0}
   shellCount: 32
-  density: 100
-  maxFurLenght: 3
-  shellDirection: {x: 0, y: -1, z: 0}
---- !u!64 &42693964
+  density: 150
+  maxFurLenght: 2
+  shellDirection: {x: 0, y: 0.5, z: 0}
+--- !u!64 &42137377
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42693962}
+  m_GameObject: {fileID: 42137375}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -187,13 +187,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &42693965
+--- !u!23 &42137378
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42693962}
+  m_GameObject: {fileID: 42137375}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -207,7 +207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d64267af5b631f42b13190a7167b75d, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,29 +229,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &42693966
+--- !u!33 &42137379
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42693962}
+  m_GameObject: {fileID: 42137375}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &42693967
+--- !u!4 &42137380
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42693962}
+  m_GameObject: {fileID: 42137375}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6532815, y: -0.27059805, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalRotation: {x: -0.60402274, y: -0.2620026, z: -0.21984623, w: 0.71984637}
+  m_LocalPosition: {x: 0, y: 0, z: 2.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: -80, y: -40, z: 0}
 --- !u!1 &168474412
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   shellsLocationTexture: {fileID: 2800000, guid: 575d486c3272885459b004eb8e056ca6, type: 3}
   tint: {r: 1, g: 1, b: 1, a: 0}
   shellCount: 32
-  density: 300
+  density: 1000
   maxFurLenght: 0.1
   shellDirection: {x: 0, y: -0.05, z: 0}
 --- !u!1 &782217048
@@ -566,11 +566,11 @@ MonoBehaviour:
   shellShader: {fileID: 4800000, guid: 99de75e617cd4ad46b84e04b7406b786, type: 3}
   shellTexture: {fileID: 0}
   shellsLocationTexture: {fileID: 0}
-  tint: {r: 0, g: 0, b: 0, a: 0}
+  tint: {r: 1, g: 0, b: 0, a: 0}
   shellCount: 32
   density: 100
   maxFurLenght: 0.4
-  shellDirection: {x: 0, y: -0.4, z: 0}
+  shellDirection: {x: 0, y: 0, z: 0}
 --- !u!136 &1377268945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -665,6 +665,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 782217051}
   - {fileID: 168474414}
-  - {fileID: 42693967}
+  - {fileID: 42137380}
   - {fileID: 1377268948}
   - {fileID: 1310020569}
