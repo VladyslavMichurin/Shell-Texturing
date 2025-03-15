@@ -255,6 +255,8 @@ MonoBehaviour:
   noiseMin: 0
   noiseMax: 1
   thickness: 1
+  distanceAttenuation: 1
+  curvature: 1
   shellDirection: {x: 0, y: -0.5, z: 0}
 --- !u!1 &168474412
 GameObject:
@@ -375,11 +377,13 @@ MonoBehaviour:
   shellsLocationTexture: {fileID: 2800000, guid: 575d486c3272885459b004eb8e056ca6, type: 3}
   tint: {r: 1, g: 1, b: 1, a: 0}
   shellCount: 32
-  density: 1000
+  density: 500
   maxShellLenght: 0.1
-  noiseMin: 0.8
+  noiseMin: 0.3
   noiseMax: 1
   thickness: 1
+  distanceAttenuation: 0.5
+  curvature: 3
   shellDirection: {x: 0, y: -0.05, z: 0}
 --- !u!1 &782217048
 GameObject:
@@ -670,6 +674,8 @@ MonoBehaviour:
   noiseMin: 0
   noiseMax: 1
   thickness: 1
+  distanceAttenuation: 1
+  curvature: 1
   shellDirection: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

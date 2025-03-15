@@ -48,6 +48,8 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
             float _MaxShellLength;
             float _NoiseMin, _NoiseMax;
             float _Thickness;
+            float _ShellDistanceAttenuation;
+            float _Curvature;
 
             float3 _ShellDirection;
 
@@ -59,10 +61,11 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
                 o.normal = normalize(UnityObjectToWorldNormal(v.normal));
 
                 float h = (float)_ShellIndex / (float)_ShellCount;
+                h = pow(h, _ShellDistanceAttenuation);
                 float FurLength = _MaxShellLength * h;
                 v.vertex.xyz += (v.normal.xyz * FurLength);
 
-                float k = pow(h, 3);
+                float k = pow(h, _Curvature);
                 float3 shellDirection = _ShellDirection;
                 #if defined(_GLOBAL_SHELL_DIRECTION)
                     shellDirection = mul(unity_WorldToObject, _ShellDirection);
@@ -93,18 +96,19 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
                 float2 newUV = i.uv * _Density;
                 float h = shellIndex / shellCount;
 
-                float localDistanceFromCenter = 0;
-                #if defined(_TAPPER_SHELLS)
-                    float2 localUV = frac(newUV) * 2 - 1;
-                    localDistanceFromCenter = length(localUV);
-                #endif
-
                 uint2 hashUV = newUV;
                 uint seed = hashUV.x + 100 * hashUV.y + 100 * 10;
                 float rand = lerp(_NoiseMin, _NoiseMax, hash(seed)) * shellsLocation;
 
-                int outsideThickness = (localDistanceFromCenter) > (_Thickness * (rand - h));
-                if(outsideThickness && shellIndex > 0)
+                int discardCondition = rand < h;
+                #if defined(_TAPPER_SHELLS)
+                    float2 localUV = frac(newUV) * 2 - 1;
+                    float localDistanceFromCenter = length(localUV);
+                    int outsideThickness = (localDistanceFromCenter) > (_Thickness * (rand - h));
+                    discardCondition = outsideThickness;
+                #endif
+
+                if(discardCondition && shellIndex > 0)
                 {
                     discard;
                 }

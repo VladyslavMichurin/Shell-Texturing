@@ -16,17 +16,21 @@ public class VladShellController : MonoBehaviour
 
     [Header("Shell Variables")]
     [Range(0, 128)]
-    public int shellCount = 16;
+    public int shellCount = 32;
     [Range(1.0f, 1000.0f)]
-    public float density = 100.0f;
+    public float density = 150.0f;
     [Range(0.0f, 3.0f)]
-    public float maxShellLenght = 2.0f;
+    public float maxShellLenght = 0.2f;
     [Range(0.0f, 1.0f)]
     public float noiseMin = 0.0f;
     [Range(0.0f, 1.0f)]
     public float noiseMax = 1.0f;
     [Range(0.0f, 1.5f)]
     public float thickness = 1.0f;
+    [Range(0.01f, 3.0f)]
+    public float distanceAttenuation = 1.0f;
+    [Range(1.0f, 10.0f)]
+    public float curvature = 3.0f;
 
     public Vector3 shellDirection;
 
@@ -99,6 +103,8 @@ public class VladShellController : MonoBehaviour
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_NoiseMin", noiseMin);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_NoiseMax", noiseMax);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Thickness", thickness);
+        shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Curvature", curvature);
+        shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_ShellDistanceAttenuation", distanceAttenuation);
 
         shells[_index].GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", shellDirection);
     }
