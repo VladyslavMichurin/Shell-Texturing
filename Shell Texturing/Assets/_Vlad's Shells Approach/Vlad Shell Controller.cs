@@ -8,15 +8,15 @@ public class VladShellController : MonoBehaviour
     public bool GlobalShellDirection = true;
     public bool TapperShells = true;
 
-    [Header("Shell Components")]
+    [Header("Shells and Fins Components")]
     public Shader shellShader;
+    public Shader finsShader;
     public Texture2D shellTexture;
     public Texture2D shellsLocationTexture;
     public Color tint;
+    public Texture2D finsTexture;
 
-    [Header("Shell Variables")]
-    [Range(0, 128)]
-    public int shellCount = 32;
+    [Header("Shells and Fins Variables")]
     [Range(1.0f, 1000.0f)]
     public float density = 150.0f;
     [Range(0.0f, 3.0f)]
@@ -25,6 +25,10 @@ public class VladShellController : MonoBehaviour
     public float noiseMin = 0.0f;
     [Range(0.0f, 1.0f)]
     public float noiseMax = 1.0f;
+
+    [Header("Shells Variables")]
+    [Range(0, 128)]
+    public int shellCount = 32;
     [Range(0.0f, 1.5f)]
     public float thickness = 1.0f;
     [Range(0.01f, 3.0f)]
@@ -36,13 +40,12 @@ public class VladShellController : MonoBehaviour
 
     private Material shellMaterial;
     private List<GameObject> shells;
-
+    private Material finsMaterial;
+    private GameObject fins;
     private void OnEnable()
     {
         shellMaterial = new Material(shellShader);
-
         shells = new List<GameObject>();
-
         GameObject shellHolder = new GameObject("Shell Holder");
         shellHolder.transform.SetParent(this.transform, false);
 
@@ -56,8 +59,22 @@ public class VladShellController : MonoBehaviour
             shells[i].GetComponent<MeshRenderer>().material = shellMaterial;
             shells[i].transform.SetParent(shellHolder.transform, false);
 
-            UpdateShaderVariables(i);
+            UpdateShellVariables(i);
         }
+
+        finsMaterial = new Material(finsShader);
+        GameObject finsHolder = new GameObject("Fins Holder");
+        finsHolder.transform.SetParent(this.transform, false);
+
+        fins = new GameObject("Fins");
+        fins.AddComponent<MeshFilter>();
+        fins.AddComponent<MeshRenderer>();
+
+        fins.GetComponent<MeshFilter>().mesh = this.GetComponent<MeshFilter>().mesh;
+        fins.GetComponent<MeshRenderer>().material = finsMaterial;
+        fins.transform.SetParent(finsHolder.transform, false);
+
+        UpdateFinsVariables();
     }
 
     private void FixedUpdate()
@@ -66,14 +83,15 @@ public class VladShellController : MonoBehaviour
         {
             for (int i = 0; i < shellCount; i++)
             {
-                UpdateShaderVariables(i);
+                UpdateShellVariables(i);
             }
+
+            UpdateFinsVariables();
         }
     }
 
-    void UpdateShaderVariables(int _index)
+    void UpdateShellVariables(int _index)
     {
-
         SetKeyword(_index, "_GLOBAL_SHELL_DIRECTION", GlobalShellDirection);
         SetKeyword(_index, "_TAPPER_SHELLS", TapperShells);
 
@@ -108,6 +126,39 @@ public class VladShellController : MonoBehaviour
 
         shells[_index].GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", shellDirection);
     }
+    void UpdateFinsVariables()
+    {
+        if (shellTexture)
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_ShellTexture", shellTexture);
+        }
+        else
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_ShellTexture", Texture2D.whiteTexture);
+        }
+        if (shellsLocationTexture)
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_ShellsLocationTexture", shellsLocationTexture);
+        }
+        else
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_ShellsLocationTexture", Texture2D.whiteTexture);
+        }
+        fins.GetComponent<MeshRenderer>().material.SetColor("_Tint", tint);
+        if (finsTexture)
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_FinsTexture", finsTexture);
+        }
+        else
+        {
+            fins.GetComponent<MeshRenderer>().material.SetTexture("_FinsTexture", Texture2D.blackTexture);
+        }
+
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_Density", density);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_MaxShellLength", maxShellLenght);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMin", noiseMin);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMax", noiseMax);
+    }
     void SetKeyword(int _index, string _keyword, bool _state)
     {
         if (_state)
@@ -127,5 +178,7 @@ public class VladShellController : MonoBehaviour
             Destroy(shells[i]);
         }
         shells.Clear();
+
+        Destroy(fins);
     }
 }

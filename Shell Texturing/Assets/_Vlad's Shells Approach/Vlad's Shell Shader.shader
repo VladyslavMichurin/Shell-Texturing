@@ -1,4 +1,4 @@
-Shader "_MyShaders/3)Vlad's Shell Shader"
+Shader "_MyShaders/_Vlad's Shell Shader"
 {
     SubShader
     {
@@ -7,16 +7,16 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
             "LightMode" = "ForwardBase"
         }
 
-        Cull Off
-
         Pass
         {
             Name "Shells"
 
+            Cull Off
+            ZWrite On
+
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma geometry geom
 
             #pragma multi_compile _ _GLOBAL_SHELL_DIRECTION
             #pragma multi_compile _ _TAPPER_SHELLS
@@ -84,35 +84,7 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
                 o.vertex = UnityObjectToClipPos(v.vertex);
 
                 return o;
-            }
-            
-            [maxvertexcount(4)] 
-            void geom(lineadj v2f input[4], inout TriangleStream<v2f> stream)
-            {
-                float viewDir = input[0].viewDir;
-                float3 N1 = normalize(cross( input[0].worldPos - input[1].worldPos,
-                                        input[3].worldPos - input[1].worldPos));
-                float3 N2 = normalize(cross(input[2].worldPos - input[1].worldPos,
-                                        input[0].worldPos - input[1].worldPos)); 
-
-                float viewDotN1 = dot(viewDir, N1);
-                float viewDotN2 = dot(viewDir, N2);
-
-                v2f g0, g1, g2, g3;
-                g0 = input[0];
-                g1 = input[1];
-                g2 = input[2];
-                g3 = input[3];
-
-                if( viewDotN1 * viewDotN2 < 0)
-                {
-                    //stream.Append(g3);
-                }
-
-	            stream.Append(g0);
-	            stream.Append(g1);
-	            stream.Append(g2);
-            }
+            }       
 
             float hash(uint n) {
 				// integer hash copied from Hugo Elias
@@ -155,5 +127,6 @@ Shader "_MyShaders/3)Vlad's Shell Shader"
             }
             ENDCG
         }
+
     }
 }
