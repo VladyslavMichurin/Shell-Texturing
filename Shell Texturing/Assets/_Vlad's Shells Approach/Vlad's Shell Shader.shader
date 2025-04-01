@@ -54,8 +54,10 @@ Shader "_MyShaders/_Vlad's Shell Shader"
             float _MaxShellLength;
             float _NoiseMin, _NoiseMax;
             float _Thickness;
-            float _ShellDistanceAttenuation;
             float _Curvature;
+            float _Attenuation;
+            float _OcclusionBias;
+            float _ShellDistanceAttenuation; 
 
             float3 _ShellDirection;
 
@@ -121,9 +123,14 @@ Shader "_MyShaders/_Vlad's Shell Shader"
                     discard;
                 }
 
-                finalColor = lerp(albedo * h, albedo, 1 - shellsLocation);
+                float ndotl = DotClamped(i.normal, _WorldSpaceLightPos0) * 0.5f + 0.5f;
+                ndotl = ndotl * ndotl;
 
-                return float4(finalColor, 1);
+                float ambientOcclusion = pow(h, _Attenuation);
+                ambientOcclusion += _OcclusionBias;
+                ambientOcclusion = saturate(ambientOcclusion);
+
+                return float4(albedo * ndotl * ambientOcclusion, 1);
             }
             ENDCG
         }

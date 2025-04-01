@@ -6,9 +6,10 @@ public class VladShellController : MonoBehaviour
 {
     public bool UpdateVariables = true;
     public bool GlobalShellDirection = true;
-    public bool TapperShells = true;
+    public bool ShowShells = true;
+    public bool ShowFins = true;
 
-    [Header("Shells and Fins Components")]
+    [Header("Components")]
     public Shader shellShader;
     public Shader finsShader;
     public Texture2D shellTexture;
@@ -16,27 +17,40 @@ public class VladShellController : MonoBehaviour
     public Color tint;
     public Texture2D finsTexture;
 
-    [Header("Shells and Fins Variables")]
+    [Header("Common Variables")]
     [Range(1.0f, 1000.0f)]
-    public float density = 150.0f;
+    public float density = 1000.0f;
     [Range(0.0f, 3.0f)]
-    public float maxShellLenght = 0.2f;
+    public float maxShellLenght = 0.1f;
     [Range(0.0f, 1.0f)]
-    public float noiseMin = 0.0f;
+    public float noiseMin = 0.3f;
     [Range(0.0f, 1.0f)]
     public float noiseMax = 1.0f;
+    public Vector3 direction = new Vector3(0, -0.07f, 0);
 
     [Header("Shells Variables")]
+    [Tooltip("If true shells will be round. If false they will be blocky")]
+    public bool TapperShells = true;
     [Range(0, 128)]
     public int shellCount = 32;
     [Range(0.0f, 1.5f)]
     public float thickness = 1.0f;
-    [Range(0.01f, 3.0f)]
-    public float distanceAttenuation = 1.0f;
     [Range(1.0f, 10.0f)]
     public float curvature = 3.0f;
+    [Range(0.0f, 5.0f)]
+    public float occlusionAttenuation = 0.45f;
+    [Range(0.0f, 1.0f)]
+    public float occlusionBias = 0.58f;
+    [Range(0.01f, 3.0f)]
+    public float distanceAttenuation = 0.3f;
 
-    public Vector3 shellDirection;
+    [Header("Fins Variables")]
+    [Tooltip("Controlls how we detect shells. If true it will use camera direction. If false will use camera position in relation vertex")]
+    public bool UseCameraDir = true;
+    [Range(0.0f, 1.0f)]
+    public float lenghtOffset = 0.02f;
+    [Range(0.0f, 1.0f)]
+    public float maxCameraOffset = 0.4f;
 
     private Material shellMaterial;
     private List<GameObject> shells;
@@ -83,17 +97,20 @@ public class VladShellController : MonoBehaviour
         {
             for (int i = 0; i < shellCount; i++)
             {
+                shells[i].SetActive(ShowShells);
                 UpdateShellVariables(i);
             }
 
+            fins.SetActive(ShowFins);
             UpdateFinsVariables();
+
         }
     }
 
     void UpdateShellVariables(int _index)
     {
-        SetKeyword(_index, "_GLOBAL_SHELL_DIRECTION", GlobalShellDirection);
-        SetKeyword(_index, "_TAPPER_SHELLS", TapperShells);
+        SetKeyword(shells[_index], "_GLOBAL_SHELL_DIRECTION", GlobalShellDirection);
+        SetKeyword(shells[_index], "_TAPPER_SHELLS", TapperShells);
 
         if (shellTexture)
         {
@@ -122,12 +139,16 @@ public class VladShellController : MonoBehaviour
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_NoiseMax", noiseMax);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Thickness", thickness);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Curvature", curvature);
+        shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Attenuation", occlusionAttenuation);
+        shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_OcclusionBias", occlusionBias);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_ShellDistanceAttenuation", distanceAttenuation);
 
-        shells[_index].GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", shellDirection);
+        shells[_index].GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", direction);
     }
     void UpdateFinsVariables()
     {
+        SetKeyword(fins, "_USE_CAMERA_DIR", UseCameraDir);
+
         if (shellTexture)
         {
             fins.GetComponent<MeshRenderer>().material.SetTexture("_ShellTexture", shellTexture);
@@ -158,19 +179,23 @@ public class VladShellController : MonoBehaviour
         fins.GetComponent<MeshRenderer>().material.SetFloat("_MaxShellLength", maxShellLenght);
         fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMin", noiseMin);
         fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMax", noiseMax);
+
+        fins.GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", direction);
+
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_LenghtOffset", lenghtOffset);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_MaxOffset", maxCameraOffset);
     }
-    void SetKeyword(int _index, string _keyword, bool _state)
+    void SetKeyword(GameObject _layer, string _keyword, bool _state)
     {
         if (_state)
         {
-            shells[_index].GetComponent<MeshRenderer>().material.EnableKeyword(_keyword);
+            _layer.GetComponent<MeshRenderer>().material.EnableKeyword(_keyword);
         }
         else
         {
-            shells[_index].GetComponent<MeshRenderer>().material.DisableKeyword(_keyword);
+            _layer.GetComponent<MeshRenderer>().material.DisableKeyword(_keyword);
         }
     }
-
     void OnDisable()
     {
         for (int i = 0; i < shells.Count; ++i)

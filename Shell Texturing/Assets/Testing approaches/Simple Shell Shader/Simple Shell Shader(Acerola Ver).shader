@@ -101,7 +101,7 @@ Shader "_MyShaders/Testing/1)Simple Shell Shader(Acerola Ver)"
                 ambientOcclusion += _OcclusionBias;
                 ambientOcclusion = saturate(ambientOcclusion);
                 
-                return float4(albedo  * ndotl * ambientOcclusion, 1);
+                return float4(albedo * ndotl * ambientOcclusion, 1);
             }
             ENDCG
         }

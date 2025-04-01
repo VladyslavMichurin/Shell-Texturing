@@ -244,7 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateVariables: 1
   GlobalShellDirection: 1
-  TapperShells: 1
+  ShowShells: 1
+  ShowFins: 1
   shellShader: {fileID: 4800000, guid: 818cc0d2999370f4e8fec7df8b4f9945, type: 3}
   finsShader: {fileID: 0}
   shellTexture: {fileID: 0}
@@ -255,11 +256,17 @@ MonoBehaviour:
   maxShellLenght: 2
   noiseMin: 0
   noiseMax: 1
+  direction: {x: 0, y: 0, z: 0}
+  TapperShells: 1
   shellCount: 32
   thickness: 1
-  distanceAttenuation: 1
   curvature: 1
-  shellDirection: {x: 0, y: -0.5, z: 0}
+  occlusionAttenuation: 1
+  occlusionBias: 0
+  distanceAttenuation: 1
+  UseCameraDir: 0
+  lenghtOffset: 0.2
+  maxCameraOffset: 0.5
 --- !u!1 &168474412
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,22 +380,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateVariables: 1
   GlobalShellDirection: 1
-  TapperShells: 0
+  ShowShells: 1
+  ShowFins: 0
   shellShader: {fileID: 4800000, guid: 818cc0d2999370f4e8fec7df8b4f9945, type: 3}
   finsShader: {fileID: 4800000, guid: 2c50b4938efee4c4cbc7c2b44b26614b, type: 3}
   shellTexture: {fileID: 2800000, guid: f5ce65dd26b6ee747852e3f19fb41d5f, type: 3}
   shellsLocationTexture: {fileID: 2800000, guid: 575d486c3272885459b004eb8e056ca6, type: 3}
   tint: {r: 1, g: 1, b: 1, a: 0}
-  finsTexture: {fileID: 2800000, guid: 4cb8cb532adaf114286160c8ff2ef753, type: 3}
-  density: 500
+  finsTexture: {fileID: 2800000, guid: 95346aba2e5b3f44291dd083da72042c, type: 3}
+  density: 1000
   maxShellLenght: 0.1
   noiseMin: 0.3
   noiseMax: 1
-  shellCount: 0
+  direction: {x: 0, y: -0.07, z: 0}
+  TapperShells: 1
+  shellCount: 32
   thickness: 1
-  distanceAttenuation: 0.5
-  curvature: 3
-  shellDirection: {x: 0, y: -0.05, z: 0}
+  curvature: 2
+  occlusionAttenuation: 1.25
+  occlusionBias: 0.8
+  distanceAttenuation: 1.25
+  UseCameraDir: 0
+  lenghtOffset: 0.015
+  maxCameraOffset: 0.4
 --- !u!1 &782217048
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpdateVariables: 1
   GlobalShellDirection: 1
-  TapperShells: 1
+  ShowShells: 1
+  ShowFins: 1
   shellShader: {fileID: 4800000, guid: 818cc0d2999370f4e8fec7df8b4f9945, type: 3}
   finsShader: {fileID: 0}
   shellTexture: {fileID: 0}
@@ -678,11 +693,17 @@ MonoBehaviour:
   maxShellLenght: 2
   noiseMin: 0
   noiseMax: 1
+  direction: {x: 0, y: 0, z: 0}
+  TapperShells: 1
   shellCount: 32
   thickness: 1
-  distanceAttenuation: 1
   curvature: 1
-  shellDirection: {x: 0, y: 0, z: 0}
+  occlusionAttenuation: 1
+  occlusionBias: 0
+  distanceAttenuation: 1
+  UseCameraDir: 0
+  lenghtOffset: 0.2
+  maxCameraOffset: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
