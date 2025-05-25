@@ -3,4 +3,4 @@ This is a material that aims to make 3d objects look as if they were drawn in ma
 
 # Showcase  
 I used Pulchra model for Zenless Zone Zero
-![pulchra](./Examples/Pulchra_Rotating.gif)
+![pulchra](./Examples/Pulchra-Rotating.gif)
