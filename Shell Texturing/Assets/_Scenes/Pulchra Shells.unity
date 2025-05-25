@@ -561,13 +561,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73940563}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
+  m_LocalPosition: {x: 0, y: 1.83, z: -9.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!1 &76803345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,6 +3093,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 2
   distanceAttenuation: 1.25
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -5270,6 +5271,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 1.25
   distanceAttenuation: 1.5
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -6384,6 +6386,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 4
   distanceAttenuation: 1.5
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -8069,6 +8072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792973309}
+  - component: {fileID: 792973310}
   m_Layer: 0
   m_Name: lkjfklsdja (1)
   m_TagString: Untagged
@@ -8084,8 +8088,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792973308}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.674, y: -0.3, z: -7.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0.01745245, w: 0.99984777}
+  m_LocalPosition: {x: 0.75, y: -0.3, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8096,7 +8100,21 @@ Transform:
   - {fileID: 1956728921}
   - {fileID: 1681013205}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2}
+--- !u!114 &792973310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792973308}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c7d6734d943674db0bae751c35e115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 792973309}
+  rotationSpeed: 50
 --- !u!1 &808803534
 GameObject:
   m_ObjectHideFlags: 0
@@ -9339,6 +9357,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 1.35
   distanceAttenuation: 1.15
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -13574,6 +13593,7 @@ MonoBehaviour:
   thickness: 1.15
   curvature: 1.25
   distanceAttenuation: 1.5
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -17786,6 +17806,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 2.2
   distanceAttenuation: 1.22
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -24575,7 +24596,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551427223221101826}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -28164,7 +28185,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6831726927839190661}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -32950,7 +32971,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250468141986572145}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -33304,10 +33325,11 @@ MonoBehaviour:
   occlusionBias: 0.45
   direction: {x: 0, y: -0.04, z: 0}
   TapperShells: 1
-  shellCount: 32
+  shellCount: 128
   thickness: 1.15
   curvature: 1.25
   distanceAttenuation: 1.5
+  randomDirection: 0.005
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -33421,10 +33443,11 @@ MonoBehaviour:
   occlusionBias: 0.85
   direction: {x: 0, y: -0.05, z: 0}
   TapperShells: 1
-  shellCount: 32
+  shellCount: 128
   thickness: 1
   curvature: 1.35
   distanceAttenuation: 1.15
+  randomDirection: 0.025
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -36111,7 +36134,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785329248085504940}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -36463,12 +36486,13 @@ MonoBehaviour:
   noiseMax: 1
   occlusionAttenuation: 0.75
   occlusionBias: 0.9
-  direction: {x: 0, y: -0.05, z: 0}
+  direction: {x: 0, y: -0.04, z: 0}
   TapperShells: 1
-  shellCount: 32
+  shellCount: 128
   thickness: 1
   curvature: 2.2
   distanceAttenuation: 1.22
+  randomDirection: 0.035
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -36835,7 +36859,7 @@ MonoBehaviour:
   UpdateVariables: 1
   GlobalShellDirection: 1
   ShowShells: 1
-  ShowFins: 0
+  ShowFins: 1
   shellShader: {fileID: 4800000, guid: 818cc0d2999370f4e8fec7df8b4f9945, type: 3}
   finsShader: {fileID: 4800000, guid: 2c50b4938efee4c4cbc7c2b44b26614b, type: 3}
   shellTexture: {fileID: 2800000, guid: 5c8f99c6baee71e499c1002a76b31d36, type: 3}
@@ -36843,17 +36867,18 @@ MonoBehaviour:
   tint: {r: 1, g: 1, b: 1, a: 0}
   finsTexture: {fileID: 2800000, guid: 95346aba2e5b3f44291dd083da72042c, type: 3}
   density: 150
-  maxShellLenght: 0.02
+  maxShellLenght: 0.01
   noiseMin: 0.3
   noiseMax: 1
   occlusionAttenuation: 1.25
   occlusionBias: 1
-  direction: {x: 0, y: -0.02, z: 0}
+  direction: {x: 0, y: -0.01, z: 0}
   TapperShells: 1
-  shellCount: 32
+  shellCount: 128
   thickness: 1
   curvature: 4
   distanceAttenuation: 1.5
+  randomDirection: 0
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -39636,6 +39661,7 @@ MonoBehaviour:
   thickness: 1
   curvature: 2
   distanceAttenuation: 1.25
+  randomDirection: 0.05
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -39696,8 +39722,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9099708223900067844}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: -7.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0.01745245, w: 0.99984777}
+  m_LocalPosition: {x: -0.75, y: -0.3, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39708,7 +39734,7 @@ Transform:
   - {fileID: 4803451359924222135}
   - {fileID: 1464144527}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2}
 --- !u!1 &8452030311891337375
 GameObject:
   m_ObjectHideFlags: 0
@@ -40609,7 +40635,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4685928920590556766}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -40963,10 +40989,11 @@ MonoBehaviour:
   occlusionBias: 0.45
   direction: {x: 0, y: -0.05, z: 0}
   TapperShells: 1
-  shellCount: 32
+  shellCount: 128
   thickness: 1
   curvature: 1.25
   distanceAttenuation: 1.5
+  randomDirection: 0.035
   UseCameraDir: 1
   lenghtOffset: 0.02
   directionPower: 0.5
@@ -41170,6 +41197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8431715720507945662}
+  - component: {fileID: 9099708223900067845}
   m_Layer: 0
   m_Name: lkjfklsdja
   m_TagString: Untagged
@@ -41177,6 +41205,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9099708223900067845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099708223900067844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c7d6734d943674db0bae751c35e115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 8431715720507945662}
+  rotationSpeed: 50
 --- !u!4 &9109741162661369598
 Transform:
   m_ObjectHideFlags: 0

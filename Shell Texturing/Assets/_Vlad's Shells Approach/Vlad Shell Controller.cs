@@ -43,14 +43,20 @@ public class VladShellController : MonoBehaviour
     public float curvature = 2.0f;
     [Range(0.01f, 3.0f)]
     public float distanceAttenuation = 1.25f;
+    [Tooltip("Adds random direction to shells")]
+    [Range(0.0f, 0.2f)]
+    public float randomDirection = 0.05f;
 
     [Header("Fins Variables")]
     [Tooltip("Controlls how we detect shells. If true it will use camera direction. If false will use camera position in relation vertex")]
     public bool UseCameraDir = true;
+    [Tooltip("Adjusts fins lenght")]
     [Range(0.0f, 1.0f)]
     public float lenghtOffset = 0.05f;
+    [Tooltip("Adjusts how much fins follow the shells direction")]
     [Range(0.0f, 1.0f)]
     public float directionPower = 0.2f;
+    [Tooltip("Adjusts when to generate fins")]
     [Range(0.0f, 1.0f)]
     public float maxCameraOffset = 0.4f;
 
@@ -71,7 +77,7 @@ public class VladShellController : MonoBehaviour
         {
             SkinnedMeshRenderer renderer = this.GetComponent<SkinnedMeshRenderer>();
             mesh = renderer.sharedMesh;
-            //renderer.enabled = false;
+            renderer.enabled = false;
         }
 
         shellMaterial = new Material(shellShader);
@@ -158,6 +164,7 @@ public class VladShellController : MonoBehaviour
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_Attenuation", occlusionAttenuation);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_OcclusionBias", occlusionBias);
         shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_ShellDistanceAttenuation", distanceAttenuation);
+        shells[_index].GetComponent<MeshRenderer>().material.SetFloat("_RandomDirection", randomDirection);
 
         shells[_index].GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", direction);
     }
