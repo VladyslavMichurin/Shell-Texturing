@@ -20,4 +20,4 @@ and Hair using Shells](https://xbdev.net/misc_demos/demos/fur_course_notes/paper
 
 4)[toninhoPinto](https://github.com/toninhoPinto/Shells-and-Fins#)
 
-5)[Pulchra model for Zenless Zone Zero](https://sketchfab.com/3d-models/pulchra-zenless-zone-zero-game-character-743a408ba3f94635b33e71f2bcd882c2)
+5)[Pulchra model from Zenless Zone Zero](https://sketchfab.com/3d-models/pulchra-zenless-zone-zero-game-character-743a408ba3f94635b33e71f2bcd882c2)
