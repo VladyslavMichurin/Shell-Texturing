@@ -3,9 +3,9 @@ This is a material that aims to make 3d objects look as if they were drawn in ma
 
 ## Showcase  
 I used Pulchra model for Zenless Zone Zero
+![Pulchra](./Examples/Pulchra-Rotating.gif)
 
 ### Images  
-![Pulchra](./Examples/Pulchra-Rotating.gif)
 ![Pulchra](./Examples/Pulchra-Face.png)
 ![Pulchra](./Examples/Pulchra-Body.png)
 ![Pulchra](./Examples/Pulchra-Legs.png)
@@ -14,6 +14,6 @@ I used Pulchra model for Zenless Zone Zero
 ## Resources Used
 1)[Acerola](https://www.youtube.com/watch?v=9dr-tRQzij4&t=789s)
 2)[A Practical Guide to Generating Real-Time Dynamic Fur
-3)and Hair using Shells](https://xbdev.net/misc_demos/demos/fur_course_notes/paper.pdf)
-4)[Fur (using Shells and Fins)](https://developer.download.nvidia.com/SDK/10/direct3d/Source/Fur/doc/FurShellsAndFins.pdf)
-5)[toninhoPinto](https://github.com/toninhoPinto/Shells-and-Fins#)
+and Hair using Shells](https://xbdev.net/misc_demos/demos/fur_course_notes/paper.pdf)
+3)[Fur (using Shells and Fins)](https://developer.download.nvidia.com/SDK/10/direct3d/Source/Fur/doc/FurShellsAndFins.pdf)
+4)[toninhoPinto](https://github.com/toninhoPinto/Shells-and-Fins#)
