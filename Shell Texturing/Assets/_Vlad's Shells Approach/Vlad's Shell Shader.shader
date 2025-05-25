@@ -21,8 +21,7 @@ Shader "_MyShaders/_Vlad's Shell Shader"
             #pragma multi_compile _ _GLOBAL_SHELL_DIRECTION
             #pragma multi_compile _ _TAPPER_SHELLS
 
-            #include "UnityPBSLighting.cginc"
-            #include "AutoLight.cginc"
+            #include "Shell_Fins Common.cginc"
 
             struct appdata
             {
@@ -38,28 +37,16 @@ Shader "_MyShaders/_Vlad's Shell Shader"
                 float2 uv : TEXCOORD0;
 
                 float3 normal : TEXCOORD1;
-
-                float3 worldPos : TEXCOORD2;
-                float3 viewDir : TEXCOORD3;
             };
 
-            sampler2D _ShellTexture, _ShellsLocationTexture;
-            float4 _ShellTexture_ST, _ShellsLocationTexture_ST;
             float4 _Tint;
 
             int _ShellIndex;
             int _ShellCount;
 
-            float _Density;
-            float _MaxShellLength;
-            float _NoiseMin, _NoiseMax;
             float _Thickness;
             float _Curvature;
-            float _Attenuation;
-            float _OcclusionBias;
             float _ShellDistanceAttenuation; 
-
-            float3 _ShellDirection;
 
             v2f vert (appdata v)
             {
@@ -67,9 +54,6 @@ Shader "_MyShaders/_Vlad's Shell Shader"
 
                 o.uv = TRANSFORM_TEX(v.uv, _ShellTexture);
                 o.normal = normalize(UnityObjectToWorldNormal(v.normal));
-
-                o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                o.viewDir = normalize(WorldSpaceViewDir(v.vertex));
 
                 float h = (float)_ShellIndex / (float)_ShellCount;
                 h = pow(h, _ShellDistanceAttenuation);
@@ -98,7 +82,6 @@ Shader "_MyShaders/_Vlad's Shell Shader"
             {
                 float3 albedo = tex2D(_ShellTexture, i.uv) * _Tint;
                 float shellsLocation = tex2D(_ShellsLocationTexture, i.uv);
-                float3 finalColor = float3(255, 0, 255) / (float)255;
 
                 float shellIndex = _ShellIndex;
                 float shellCount = _ShellCount;
@@ -123,14 +106,10 @@ Shader "_MyShaders/_Vlad's Shell Shader"
                     discard;
                 }
 
-                float ndotl = DotClamped(i.normal, _WorldSpaceLightPos0) * 0.5f + 0.5f;
-                ndotl = ndotl * ndotl;
-
-                float ambientOcclusion = pow(h, _Attenuation);
-                ambientOcclusion += _OcclusionBias;
-                ambientOcclusion = saturate(ambientOcclusion);
-
-                return float4(albedo * ndotl * ambientOcclusion, 1);
+                //return float4(albedo, 1);
+                float contributions = AmbientOcclusion(h);
+                contributions = lerp(1, contributions, shellsLocation);
+                return float4(albedo * contributions * NdotL(i.normal), 1);
             }
             ENDCG
         }

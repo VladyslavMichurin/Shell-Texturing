@@ -14,7 +14,7 @@ public class VladShellController : MonoBehaviour
     public Shader finsShader;
     public Texture2D shellTexture;
     public Texture2D shellsLocationTexture;
-    public Color tint;
+    public Color tint = Color.white;
     public Texture2D finsTexture;
 
     [Header("Common Variables")]
@@ -26,6 +26,10 @@ public class VladShellController : MonoBehaviour
     public float noiseMin = 0.3f;
     [Range(0.0f, 1.0f)]
     public float noiseMax = 1.0f;
+    [Range(0.0f, 5.0f)]
+    public float occlusionAttenuation = 1.25f;
+    [Range(0.0f, 1.0f)]
+    public float occlusionBias = 0.8f;
     public Vector3 direction = new Vector3(0, -0.07f, 0);
 
     [Header("Shells Variables")]
@@ -36,19 +40,17 @@ public class VladShellController : MonoBehaviour
     [Range(0.0f, 1.5f)]
     public float thickness = 1.0f;
     [Range(1.0f, 10.0f)]
-    public float curvature = 3.0f;
-    [Range(0.0f, 5.0f)]
-    public float occlusionAttenuation = 0.45f;
-    [Range(0.0f, 1.0f)]
-    public float occlusionBias = 0.58f;
+    public float curvature = 2.0f;
     [Range(0.01f, 3.0f)]
-    public float distanceAttenuation = 0.3f;
+    public float distanceAttenuation = 1.25f;
 
     [Header("Fins Variables")]
     [Tooltip("Controlls how we detect shells. If true it will use camera direction. If false will use camera position in relation vertex")]
     public bool UseCameraDir = true;
     [Range(0.0f, 1.0f)]
-    public float lenghtOffset = 0.02f;
+    public float lenghtOffset = 0.05f;
+    [Range(0.0f, 1.0f)]
+    public float directionPower = 0.2f;
     [Range(0.0f, 1.0f)]
     public float maxCameraOffset = 0.4f;
 
@@ -58,6 +60,20 @@ public class VladShellController : MonoBehaviour
     private GameObject fins;
     private void OnEnable()
     {
+        Mesh mesh;
+        if (this.GetComponent<MeshFilter>() != null)
+        {
+            MeshRenderer renderer = this.GetComponent<MeshRenderer>();
+            mesh = this.GetComponent<MeshFilter>().mesh;
+            //renderer.enabled = false;
+        }
+        else
+        {
+            SkinnedMeshRenderer renderer = this.GetComponent<SkinnedMeshRenderer>();
+            mesh = renderer.sharedMesh;
+            //renderer.enabled = false;
+        }
+
         shellMaterial = new Material(shellShader);
         shells = new List<GameObject>();
         GameObject shellHolder = new GameObject("Shell Holder");
@@ -69,7 +85,7 @@ public class VladShellController : MonoBehaviour
             shells[i].AddComponent<MeshFilter>();
             shells[i].AddComponent<MeshRenderer>();
 
-            shells[i].GetComponent<MeshFilter>().mesh = this.GetComponent<MeshFilter>().mesh;
+            shells[i].GetComponent<MeshFilter>().mesh = mesh;
             shells[i].GetComponent<MeshRenderer>().material = shellMaterial;
             shells[i].transform.SetParent(shellHolder.transform, false);
 
@@ -84,7 +100,7 @@ public class VladShellController : MonoBehaviour
         fins.AddComponent<MeshFilter>();
         fins.AddComponent<MeshRenderer>();
 
-        fins.GetComponent<MeshFilter>().mesh = this.GetComponent<MeshFilter>().mesh;
+        fins.GetComponent<MeshFilter>().mesh = mesh;
         fins.GetComponent<MeshRenderer>().material = finsMaterial;
         fins.transform.SetParent(finsHolder.transform, false);
 
@@ -179,10 +195,13 @@ public class VladShellController : MonoBehaviour
         fins.GetComponent<MeshRenderer>().material.SetFloat("_MaxShellLength", maxShellLenght);
         fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMin", noiseMin);
         fins.GetComponent<MeshRenderer>().material.SetFloat("_NoiseMax", noiseMax);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_Attenuation", occlusionAttenuation);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_OcclusionBias", occlusionBias);
 
         fins.GetComponent<MeshRenderer>().material.SetVector("_ShellDirection", direction);
 
         fins.GetComponent<MeshRenderer>().material.SetFloat("_LenghtOffset", lenghtOffset);
+        fins.GetComponent<MeshRenderer>().material.SetFloat("_DirectionPower", directionPower);
         fins.GetComponent<MeshRenderer>().material.SetFloat("_MaxOffset", maxCameraOffset);
     }
     void SetKeyword(GameObject _layer, string _keyword, bool _state)
