@@ -1,5 +1,5 @@
 # Shell-Texturing
-Generation of highly customizable fur and hair using shells and fins. For this project i also combined improvments varius different resources listen [here](## Resources Used)  
+Generation of highly customizable fur and hair using shells and fins. For this project i also combined improvments varius different resources listen [here](##resources-used)  
 
 ## Showcase  
 ![Pulchra](./Examples/Pulchra-Rotating.gif)
