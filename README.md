@@ -12,7 +12,7 @@ I used Pulchra model for Zenless Zone Zero
 ![Pulchra](./Examples/Pulchra-Tail.png)
 
 ## Resources Used
-1)[Acerola](https://www.youtube.com/watch?v=9dr-tRQzij4&t=789s)
+1)[Acerola](https://www.youtube.com/watch?v=9dr-tRQzij4&t=789s) \n
 2)[A Practical Guide to Generating Real-Time Dynamic Fur
 and Hair using Shells](https://xbdev.net/misc_demos/demos/fur_course_notes/paper.pdf)
 3)[Fur (using Shells and Fins)](https://developer.download.nvidia.com/SDK/10/direct3d/Source/Fur/doc/FurShellsAndFins.pdf)
