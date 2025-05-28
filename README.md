@@ -11,7 +11,7 @@ Generation of highly customizable fur and hair using shells and fins. For this p
 ![Pulchra](./Examples/Pulchra-Tail.png)
 
 ## Resources Used
- - [Acerola](https://www.youtube.com/watch?v=9dr-tRQzij4&t=789s) 
+ - [Acerola](https://youtu.be/9dr-tRQzij4?si=5xC-WfTTSaKJKiDs) 
 
  - [A Practical Guide to Generating Real-Time Dynamic Fur
 and Hair using Shells](https://xbdev.net/misc_demos/demos/fur_course_notes/paper.pdf)
